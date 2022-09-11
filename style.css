@@ -1,0 +1,74 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;600;700&display=swap');
+
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Open Sans';
+    font-size: 12px;
+    font-weight: 300;
+    color: white;
+    background: #021c1d;
+}
+
+h1 {
+    text-align: center;
+    font-size: 35px;
+    padding: 50px 0;
+}
+
+.accordion {
+    max-width: 550px;
+    margin: 0 auto 100px;
+    border-top: 1px solid #022728;
+}
+
+.accordion li {
+    border-bottom: 1px solid #022728;
+    position: relative;
+    display: block;
+}
+
+.accordion button {
+    width: 100%;
+    display: block;
+    cursor: pointer;
+    font-weight: 600;
+    line-height: 3;
+    font-size: 14px;
+    user-select: none;
+    background: transparent;
+    border: none;
+    text-align: left;
+    color: white;
+}
+
+.accordion button:after {
+    content: '';
+    width: 8px;
+    height: 8px;
+    border-right: 1px solid #4a6e78;
+    border-bottom: 1px solid #4a6e78;
+    position: absolute;
+    right: 10px;
+    top: 17px;
+    transform: rotate(-45deg);
+    transition: .2s ease-in-out;
+}
+
+.accordion button.active::after {
+    transform: rotate(45deg);
+}
+
+.accordion p {
+    font-size: 13px;
+    line-height: 2;
+    padding: 10px 25px 30px;
+    color: #8a8e8e;
+    font-weight: 600;
+    display: none;
+}
